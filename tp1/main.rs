@@ -12,6 +12,10 @@ impl CompteBancaire {
     }
 
     fn retirer(&mut self, montant: f64) {
+        if montant < 0 {
+            println!("Impossible de retirer une somme négative");
+            return;
+        }
         if montant <= self.solde {
             self.solde -= montant;
             println!("Retrait de {:.2} € effectué. Nouveau solde : {:.2} €", montant, self.solde);
