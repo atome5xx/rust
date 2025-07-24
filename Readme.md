@@ -65,6 +65,25 @@ struct CompteBancaire {
     solde: f64,
 }
 
+7. Owership
+
+Rust utilise un système d’ownership (propriété) pour garantir la sécurité mémoire sans garbage collector. Chaque valeur a un propriétaire unique, et sa mémoire est libérée automatiquement quand le propriétaire sort du scope.
+
+Pour éviter les copies inutiles et permettre l'accès à une valeur sans en devenir propriétaire, on utilise les références.
+
+&T : emprunt immuable (lecture seule)
+
+&mut T : emprunt mutable (modification possible)
+
+Cela garantit :
+
+Pas de data races
+
+Pas d'accès concurrent à des données modifiables
+
+Pas de pointeurs suspendus (dangling pointers)
+
+
 Bonnes pratiques de Rust mises en œuvre
 
 1. Immuabilité par défaut
