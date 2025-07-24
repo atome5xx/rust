@@ -83,6 +83,12 @@ Pas d'accès concurrent à des données modifiables
 
 Pas de pointeurs suspendus (dangling pointers)
 
+8. Concurrence avec thread::spawn et join
+Rust permet la programmation concurrente sûre grâce à son système de possession et d’emprunt. Pour exécuter du code en parallèle, on peut créer de nouveaux threads avec std::thread::spawn.
+
+spawn démarre un nouveau thread.
+
+
 
 Bonnes pratiques de Rust mises en œuvre
 
